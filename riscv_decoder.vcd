@@ -1,0 +1,282 @@
+$date
+	Tue Jul 29 21:16:50 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module riscv_decoder_tb $end
+$var wire 1 ! reg_write_enable $end
+$var wire 5 " reg_write_dest [4:0] $end
+$var wire 2 # next_pc_select [1:0] $end
+$var wire 1 $ mem_write_enable $end
+$var wire 1 % mem_to_reg $end
+$var wire 1 & mem_read_enable $end
+$var wire 1 ' jump_enable $end
+$var wire 1 ( branch_enable $end
+$var wire 32 ) alu_operand_b [31:0] $end
+$var wire 32 * alu_operand_a [31:0] $end
+$var wire 4 + alu_control [3:0] $end
+$var reg 32 , instruction [31:0] $end
+$var reg 32 - pc [31:0] $end
+$var reg 32 . reg_read_data1 [31:0] $end
+$var reg 32 / reg_read_data2 [31:0] $end
+$scope module u_decoder $end
+$var wire 32 0 instruction [31:0] $end
+$var wire 32 1 pc [31:0] $end
+$var wire 32 2 reg_read_data1 [31:0] $end
+$var wire 32 3 reg_read_data2 [31:0] $end
+$var wire 5 4 reg_write_dest [4:0] $end
+$var wire 5 5 rs2 [4:0] $end
+$var wire 5 6 rs1 [4:0] $end
+$var wire 1 ! reg_write_enable $end
+$var wire 5 7 rd [4:0] $end
+$var wire 7 8 opcode [6:0] $end
+$var wire 2 9 next_pc_select [1:0] $end
+$var wire 1 $ mem_write_enable $end
+$var wire 1 % mem_to_reg $end
+$var wire 1 & mem_read_enable $end
+$var wire 1 ' jump_enable $end
+$var wire 32 : immediate_val [31:0] $end
+$var wire 7 ; funct7 [6:0] $end
+$var wire 3 < funct3 [2:0] $end
+$var wire 1 ( branch_enable $end
+$var wire 32 = alu_operand_b [31:0] $end
+$var wire 32 > alu_operand_a [31:0] $end
+$var wire 4 ? alu_control [3:0] $end
+$var reg 1 @ select_imm_for_alu_b $end
+$scope module alu_ctrl $end
+$var wire 3 A funct3 [2:0] $end
+$var wire 7 B funct7 [6:0] $end
+$var wire 7 C opcode [6:0] $end
+$var reg 4 D alu_control [3:0] $end
+$upscope $end
+$scope module i_gen $end
+$var wire 32 E instruction [31:0] $end
+$var wire 7 F opcode [6:0] $end
+$var reg 32 G immediate [31:0] $end
+$upscope $end
+$scope module main_ctrl $end
+$var wire 7 H opcode [6:0] $end
+$var reg 1 ( branch_enable $end
+$var reg 1 ' jump_enable $end
+$var reg 1 & mem_read_enable $end
+$var reg 1 % mem_to_reg $end
+$var reg 1 $ mem_write_enable $end
+$var reg 2 I next_pc_select [1:0] $end
+$var reg 1 ! reg_write_enable $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b0 I
+b110011 H
+b0 G
+b110011 F
+b1000001000000110110011 E
+b0 D
+b110011 C
+b0 B
+b0 A
+0@
+b0 ?
+b100000000 >
+b100000 =
+b0 <
+b0 ;
+b0 :
+b0 9
+b110011 8
+b11 7
+b1 6
+b10 5
+b11 4
+b100000 3
+b100000000 2
+b10000000000000000000000000000000 1
+b1000001000000110110011 0
+b100000 /
+b100000000 .
+b10000000000000000000000000000000 -
+b1000001000000110110011 ,
+b0 +
+b100000000 *
+b100000 )
+0(
+0'
+0&
+0%
+0$
+b0 #
+b11 "
+1!
+$end
+#10
+b1010 )
+b1010 =
+b1010 :
+b1010 G
+1!
+1@
+b10011 8
+b10011 C
+b10011 F
+b10011 H
+b100 "
+b100 4
+b100 7
+b1010 5
+b101000001000001000010011 ,
+b101000001000001000010011 0
+b101000001000001000010011 E
+#20
+1%
+1&
+1!
+b100 )
+b100 =
+b11 8
+b11 C
+b11 F
+b11 H
+b101 "
+b101 4
+b101 7
+b10 <
+b10 A
+b100 5
+b100 :
+b100 G
+b10000001010001010000011 ,
+b10000001010001010000011 0
+b10000001010001010000011 E
+#30
+1$
+0%
+0&
+0!
+b1000 )
+b1000 =
+b100011 8
+b100011 C
+b100011 F
+b100011 H
+b1000 "
+b1000 4
+b1000 7
+b10 6
+b10 5
+b1000 :
+b1000 G
+b1000010010010000100011 ,
+b1000010010010000100011 0
+b1000010010010000100011 E
+#40
+b1 #
+b1 9
+b1 I
+1(
+0$
+b1100 )
+b1100 =
+b1100011 8
+b1100011 C
+b1100011 F
+b1100011 H
+b1100 "
+b1100 4
+b1100 7
+b0 <
+b0 A
+b1 6
+b1100 5
+b1100 :
+b1100 G
+b110000001000011001100011 ,
+b110000001000011001100011 0
+b110000001000011001100011 E
+#50
+1'
+1!
+b1 #
+b1 9
+b1 I
+0(
+b10100 )
+b10100 =
+b1101111 8
+b1101111 C
+b1101111 F
+b1101111 H
+b110 "
+b110 4
+b110 7
+b0 6
+b10100 5
+b10100 :
+b10100 G
+b1010000000000001101101111 ,
+b1010000000000001101101111 0
+b1010000000000001101101111 E
+#60
+b0 #
+b0 9
+b0 I
+0'
+1!
+b1111 +
+b1111 ?
+b1111 D
+b1001000110100000000000000 )
+b1001000110100000000000000 =
+b110111 8
+b110111 C
+b110111 F
+b110111 H
+b1011 "
+b1011 4
+b1011 7
+b100 <
+b100 A
+b110 6
+b10010 5
+b1001000110100000000000000 :
+b1001000110100000000000000 G
+b1001000110100010110110111 ,
+b1001000110100010110110111 0
+b1001000110100010110110111 E
+#70
+b10000000000000000000000000000000 *
+b10000000000000000000000000000000 >
+1!
+b0 +
+b0 ?
+b0 D
+b1010101111001101000000000000 )
+b1010101111001101000000000000 =
+b10111 8
+b10111 C
+b10111 F
+b10111 H
+b11101 "
+b11101 4
+b11101 7
+b101 <
+b101 A
+b11001 6
+b1011 5
+b101 ;
+b101 B
+b1010101111001101000000000000 :
+b1010101111001101000000000000 G
+b1010101111001101111010010111 ,
+b1010101111001101111010010111 0
+b1010101111001101111010010111 E
+#80
